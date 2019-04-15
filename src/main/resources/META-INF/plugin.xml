@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>com.github.phntom.anton</id>
+    <name>Anton's IntelliJ helper</name>
+    <vendor email="anton@kix.co.il" url="https://kix.co.il">Anton Wolkov</vendor>
+
+    <description><![CDATA[
+    A bundle of experimental tools I'm trying out.<br>
+    These will be updated a lot, the good stuff will be branched off to seperate stable plugins.
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.github.phntom.anton.Example" class="com.github.phntom.anton.Example" text="Example Action"
+                description="this is a test that will be removed"/>
+    </actions>
+</idea-plugin>
