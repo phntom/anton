@@ -18,7 +18,12 @@
 
     <actions>
         <!-- Add your actions here -->
-        <action id="com.github.phntom.anton.Example" class="com.github.phntom.anton.Example" text="Example Action"
-                description="this is a test that will be removed"/>
+        <action id="com.github.phntom.anton.AntonAction" class="com.github.phntom.anton.AntonAction" text="Anton"
+                description="This is a welcoming action you can find by looking for Anton"/>
     </actions>
+    <project-components>
+        <component>
+            <implementation-class>com.github.phntom.anton.AntonProjectComponent</implementation-class>
+        </component>
+    </project-components>
 </idea-plugin>
