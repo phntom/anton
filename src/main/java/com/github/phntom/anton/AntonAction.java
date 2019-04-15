@@ -6,7 +6,7 @@ import com.intellij.openapi.ui.Messages;
 
 public class Example extends AnAction {
     public Example() {
-        super("Hello");
+        super("Anton");
     }
 
     public void actionPerformed(AnActionEvent event) {
