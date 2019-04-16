@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.github.phntom'
-version '0.0.1'
+version '0.0.2'
 
 sourceCompatibility = 1.8
 
@@ -34,7 +34,7 @@ patchPluginXml {
       """
 }
 
-task customFatJar(type: Jar) {
+task createJarWithDependencies(type: Jar) {
     baseName = 'anton-jar-with-deps'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
