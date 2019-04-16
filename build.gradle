@@ -21,10 +21,21 @@ dependencies {
 intellij {
     version '2019.1'
 }
+
+publishPlugin {
+    token intellijPublishToken
+}
+
 patchPluginXml {
     changeNotes """
       Initial release.<br>
       Plugin features:
       * auto initialize missing git submodules
       """
+}
+
+task customFatJar(type: Jar) {
+    baseName = 'anton-jar-with-deps'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }

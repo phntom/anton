@@ -101,3 +101,4 @@ fabric.properties
 .idea/httpRequests
 
 /.idea/sonarlint/
+/gradle.properties
