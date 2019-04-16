@@ -14,6 +14,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <projectService serviceInterface="com.github.phntom.anton.AntonService"
+                        serviceImplementation="com.github.phntom.anton.impl.AntonServiceImpl"/>
     </extensions>
 
     <actions>

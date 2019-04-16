@@ -9,14 +9,19 @@ import static com.github.phntom.anton.Utils.RunAndCollectOutput;
 
 public class AntonAction extends AnAction {
     public AntonAction() {
-        super("Anton");
+        super("Call Anton!");
     }
 
     public void actionPerformed(AnActionEvent event) {
         Project project = event.getProject();
-        String[] gitEmailCmd = {"/usr/bin/env", "git", "config", "--get", "user.email"};
+        if (project != null) {
+            AntonService.getInstance(project).checkNow();
+        }
+
+        String[] gitEmailCmd = {"git", "config", "--get", "user.email"};
         String email = RunAndCollectOutput(gitEmailCmd, null, null);
-        Messages.showMessageDialog(project, "Hey! Your email is "+ email,
+        Messages.showMessageDialog(project,
+                String.format("Hey %s, Anton will implement this feature in the future :)", email),
                 "Anton's IntelliJ Plugin", Messages.getInformationIcon());
     }
 }

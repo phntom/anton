@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.github.phntom'
-version '1.0-SNAPSHOT'
+version '0.0.1'
 
 sourceCompatibility = 1.8
 
@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
@@ -23,5 +24,7 @@ intellij {
 patchPluginXml {
     changeNotes """
       Initial release.<br>
-      This version changes branches of newly created git submodules to master"""
+      Plugin features:
+      * auto initialize missing git submodules
+      """
 }
