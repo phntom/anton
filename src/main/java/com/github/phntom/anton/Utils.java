@@ -1,7 +1,7 @@
 package com.github.phntom.anton;
 
+import com.github.phntom.anton.vendored.apache.lang3.StringUtils;
 import com.intellij.openapi.progress.ProgressIndicator;
-import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Utils {
+class Utils {
     private static Pattern cloneStatement = Pattern.compile("\\W*(?:Cloning into '([^ ]+)'|Submodule '([^ ]+)' [^ ]+ registered for path ).*");
     private static Pattern remoteLineCount = Pattern.compile("\\W*remote: Counting objects: +([0-9]{1,3})% .*");
     private static Pattern remoteLineCompress = Pattern.compile("\\W*remote: Compressing objects: +([0-9]{1,3})% .*");

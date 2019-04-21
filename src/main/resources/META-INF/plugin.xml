@@ -5,7 +5,7 @@
 
     <description><![CDATA[
     A bundle of experimental tools I'm trying out.<br>
-    These will be updated a lot, the good stuff will be branched off to seperate stable plugins.
+    These will be updated a lot, the good stuff will be branched off to separate stable plugins.
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -16,6 +16,7 @@
         <!-- Add your extensions here -->
         <projectService serviceInterface="com.github.phntom.anton.AntonService"
                         serviceImplementation="com.github.phntom.anton.impl.AntonServiceImpl"/>
+        <fileTypeFactory implementation="com.github.phntom.anton.AntonFileTypeFactory"/>
     </extensions>
 
     <actions>
