@@ -27,9 +27,11 @@ publishPlugin {
 
 patchPluginXml {
     changeNotes """
-      Initial release.<br>
-      Plugin features:
-      * auto initialize missing git submodules
+      Plugin features:<br>
+      <ol>
+      <li>auto initialize missing git submodules</li>
+      <li>auto switch git submodules branches</li>
+      </ol>
       """
 }
 
